@@ -75,7 +75,6 @@ def premier_non_rempli(grille):
 def resolution(grille):
     i,j=premier_non_rempli(grille)
     if i==-1 and j==-1:
-        print(grille)
         return True
     else:
         val=valeurs(grille,i,j)
@@ -88,13 +87,18 @@ def resolution(grille):
     grille[i][j]=0
     return False
 
-#exemple
-resolution ([[2,4,0,0,0,3,5,9,0],\
-             [6,0,3,2,5,0,0,0,0],\
-             [0,0,5,0,0,8,6,2,0],\
-             [5,0,0,0,0,2,3,0,7],\
-             [0,0,9,0,0,0,2,0,0],\
-             [8,0,1,7,0,0,0,0,5],\
-             [0,3,6,5,0,0,8,0,0],\
-             [0,0,0,0,8,1,7,0,6],\
-             [0,1,8,3,0,0,0,5,9]])
+
+if __name__ == "__main__":
+
+    # exemple de grille à compléter avec les inconnus noté "0"
+    grille = ([[2,4,0,0,0,3,5,9,0],\
+               [6,0,3,2,5,0,0,0,0],\
+               [0,0,5,0,0,8,6,2,0],\
+               [5,0,0,0,0,2,3,0,7],\
+               [0,0,9,0,0,0,2,0,0],\
+               [8,0,1,7,0,0,0,0,5],\
+               [0,3,6,5,0,0,8,0,0],\
+               [0,0,0,0,8,1,7,0,6],\
+               [0,1,8,3,0,0,0,5,9]])
+    resolution(grille)
+    print(grille)
